@@ -26,10 +26,9 @@ a:link, a:visited, a:hover, a:active {
     height: 500px;
 }
 
-
 .header {
     width: 100%;
-    padding: 20px 0 10px;
+    padding: 28px 0 10px;
     background: url("../images/bg-header.gif") repeat-x;
     box-shadow: 0 0 10px 1px #e3e3e3;
 }
