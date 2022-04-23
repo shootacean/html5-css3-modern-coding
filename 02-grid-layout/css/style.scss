@@ -19,6 +19,50 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+// ヘッダー
+.header {
+    padding: 25px;
+    border-bottom: none;
+    text-align: center;
+}
+.logo {
+    width: 136px;
+    height: 136px;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    &:hover {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.nav {
+    margin: 35px auto 10px;
+    
+    &-item {
+        margin-top: 20px;    
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: 1.3rem;
+
+        a {
+            display: inline-block;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                margin: 6px auto 0;
+                border-bottom: 1px solid #7c5119;
+                transition: width 0.3s ease-in-out;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
 /* ボックス */
 .item {
     width: 180px;
