@@ -1,0 +1,12 @@
+# Sample sources
+mcoding/
+
+# npm
+**/node_modules/
+
+# parcel
+**/.parcel-cache/
+
+# 02-grid-layout
+02-grid-layout/css/style.css
+02-grid-layout/css/style.css.map

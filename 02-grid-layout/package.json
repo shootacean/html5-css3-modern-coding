@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "watch": "parcel watch css/style.scss --dist-dir css",
+    "build": "parcel build css/style.scss --dist-dir css"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "parcel": "^2.5.0"
+  }
+}

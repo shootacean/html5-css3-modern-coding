@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>グリッドレイアウト</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="item item-maindish">
+        <a href="#">
+            <img src="./images/image_S_1.jpg" alt="メインディッシュ" class="image">
+            <div class="category">Main Dish</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </a>
+    </section>
+    <section class="item item-appetizer">
+        <a href="#">
+            <img src="./images/image_S_2.jpg" alt="前菜" class="image">
+            <div class="category">Appetizer</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+        </a>
+    </section>
+    <section class="item item-column">
+        <a href="#">
+            <img src="./images/image_S_3.jpg" alt="コラム" class="image">
+            <div class="category">Column</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </a>
+    </section>
+    <section class="item item-breaktime">
+        <a href="#">
+            <img src="./images/image_S_4.jpg" alt="おやつの時間" class="image">
+            <div class="category">Break Time</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+        </a>
+    </section>
+    <section class="item item-maindish">
+        <a href="#">
+            <img src="./images/image_S_5.jpg" alt="メインディッシュ" class="image">
+            <div class="category">Main Dish</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </a>
+    </section>
+    <section class="item item-breaktime">
+        <a href="#">
+            <img src="./images/image_S_6.jpg" alt="おやつの時間" class="image">
+            <div class="category">Break Time</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+        </a>
+    </section>
+    <section class="item item-maindish">
+        <a href="#">
+            <img src="./images/image_S_7.jpg" alt="メインディッシュ" class="image">
+            <div class="category">Main Dish</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </a>
+    </section>
+    <section class="item item-breaktime">
+        <a href="#">
+            <img src="./images/image_S_8.jpg" alt="おやつの時間" class="image">
+            <div class="category">Break Time</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+        </a>
+    </section>
+    <section class="item item-appetizer">
+        <a href="#">
+            <img src="./images/image_S_9.jpg" alt="前菜" class="image">
+            <div class="category">Appetizer</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+        </a>
+    </section>
+    <section class="item item-column">
+        <a href="#">
+            <img src="./images/image_S_10.jpg" alt="コラム" class="image">
+            <div class="category">Column</div>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </a>
+    </section>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        new Masonry('body', {
+            itemSelector: '.item',
+            columnWidth: 180,
+            gutter: 4,
+        })
+    </script>
+
+</body>
+</html>
