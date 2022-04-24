@@ -1,16 +1,20 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+html {
+  font-size: 62.5%;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+body {
+  background: #151515 url('../public/images/bg.png') no-repeat fixed left bottom;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: Raleway, "Hirgino Kaku Gothic ProN", meiryo, sans-serif;
 }
