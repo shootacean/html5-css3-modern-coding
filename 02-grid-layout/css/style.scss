@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+$font: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$fontCategory: "Trebuchet MS", $font;
+
 /* ベースCSS */
 html {
     font-size: 62.5%;
@@ -12,7 +15,7 @@ body {
     background-color: #f6f7fb;
     color: #333;
     font-size: 1.2rem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: $font;
 }
 a:link, a:visited, a:hover, a:active {
     color: #7c5119;
@@ -65,12 +68,70 @@ a:link, a:visited, a:hover, a:active {
 
 /* ボックス */
 .item {
+    overflow: hidden;
     width: 180px;
     margin-bottom: 4px;
     padding: 8px;
     border-bottom: 3px solid;
     border-radius: 5px;
     background-color: #fff;
+
+    & > a {
+        display: block;
+        margin: -8px -8px -11px;
+        padding: 8px 8px 11px;
+        border-radius: inherit;
+        color: #777;;
+        transition: all 0.3s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            height: 109px;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s linear;
+        }
+
+        &::after {
+            content: 'MORE';
+            position: absolute;
+            display: block;
+            left: 150%;
+            // .itemのpadding + 画像高さの半分 - この要素の高さの半分
+            top: 8px + calc(109px / 2) - 19px;
+            width: 100px;
+            margin-left: -50px;
+            padding: 8px 16px 8px;
+            border: 3px solid #fff;
+            text-align: center;
+            font-family: $fontCategory;
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            // box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
+            opacity: 0.8;
+
+            &::before {
+                opacity: 1;
+            }
+            &::after {
+                left: 50%;
+                opacity: 1;
+            }
+        }
+    }
 
     .image {
         display: block;
@@ -82,7 +143,8 @@ a:link, a:visited, a:hover, a:active {
         margin: 15px 9px 10px;
         color: #aaa;
         letter-spacing: 1px;
-        font-family: "Trebuchet MS", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        font-family: $fontCategory;
+
         &::before {
             content: '';
             display: inline-block;
@@ -98,23 +160,19 @@ a:link, a:visited, a:hover, a:active {
         margin: 10px;
         line-height: 1.5;
     }
-    & > a {
-        display: block;
-        margin: -8px -8px -11px;
-        padding: 8px 8px 11px;
-        border-radius: inherit;
-        color: #777;;
-        transition: all 0.3s;
-        
-        &:hover {
-            box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
-            opacity: 0.8;
-        }
-    }
 
     // 中ボックス
     &-m {
         width: 364px;
+        a {
+            &::before {
+                height: 146px;  
+            }
+            &::after {
+                // .itemのpadding + 画像高さの半分 - この要素の高さの半分
+                top: 8px + calc(146px / 2) - 19px;
+            }
+        }
         .image {
             height: 146px;
         }
@@ -123,6 +181,15 @@ a:link, a:visited, a:hover, a:active {
     // 大ボックス
     &-l {
         width: 732px;
+        a {
+            &::before {
+                height: 403px;  
+            }
+            &::after {
+                // .itemのpadding + 画像高さの半分 - この要素の高さの半分
+                top: 8px + calc(403px / 2) - 19px;
+            }
+        }
         .image {
             height: 403px;
         }
