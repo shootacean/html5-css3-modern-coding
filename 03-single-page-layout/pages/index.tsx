@@ -4,6 +4,23 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
+
+  const WorkBox = (src: string) => {
+    return (
+      <div className={styles.workBox}>
+        <div className={styles.workImageWrapper}>
+          <Image className={styles.workImage} src={src} alt="制作事例" width="400px" height="300px" />
+        </div>
+        <p className={styles.workText}>
+          制作事例が入ります。<br />
+          簡単な説明が入ります。<br />
+          仕様ツール：XXX, XXX, XXX<br />
+          <a href="#" className={styles.button}></a>
+        </p>
+      </div>
+    )
+  }
+
   return (
     <>
       <Head>
@@ -28,7 +45,15 @@ const Home: NextPage = () => {
           このサイトは「HTML/CSS モダンコーディング」という書籍のサンプルとしてつくられた、架空のWebデザイナーのポートフォリオサイトです。
         </p>
       </section>
-      <section className={styles.works} id='works'></section>
+      <section className={styles.works} id='works'>
+        <h2 className={styles.heading}>Works</h2>
+        <div className={styles.worksWrapper}>
+          {WorkBox('/images/tree.jpg')}
+          {WorkBox('/images/building.jpg')}
+          {WorkBox('/images/lake.jpg')}
+          {WorkBox('/images/sky.jpg')}
+        </div>
+      </section>
       <section className={styles.skills} id='skills'></section>
       <section className={styles.contact} id='contact'></section>
       <footer className={styles.footer}></footer>
