@@ -5,18 +5,22 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
 
-  const WorkBox = (src: string) => {
+  const WorkBox = (imageName: string) => {
     return (
-      <div className={styles.workBox}>
+      <div className={`${styles.workBox} ${styles[imageName]}`}>
         <div className={styles.workImageWrapper}>
-          <Image className={styles.workImage} src={src} alt="制作事例" width="400px" height="300px" />
+          <Image className={styles.workImage} src={`/images/${imageName}.jpg`} alt="制作事例" width="500px" height="300px" />
         </div>
-        <p className={styles.workText}>
-          制作事例が入ります。<br />
-          簡単な説明が入ります。<br />
-          仕様ツール：XXX, XXX, XXX<br />
-          <a href="#" className={styles.button}></a>
-        </p>
+        <div className={styles.workDescription}>
+          <div className={styles.workDescriptionInner}>
+            <p className={styles.workText}>
+              制作事例が入ります。<br />
+              簡単な説明が入ります。<br />
+              使用ツール：XXX, XXX, XXX<br />
+              <a href="#" className={`${styles.button} ${styles.buttonGhost}`}>Read More</a>
+            </p>
+          </div>
+        </div>
       </div>
     )
   }
@@ -48,10 +52,10 @@ const Home: NextPage = () => {
       <section className={styles.works} id='works'>
         <h2 className={styles.heading}>Works</h2>
         <div className={styles.worksWrapper}>
-          {WorkBox('/images/tree.jpg')}
-          {WorkBox('/images/building.jpg')}
-          {WorkBox('/images/lake.jpg')}
-          {WorkBox('/images/sky.jpg')}
+          {WorkBox('tree')}
+          {WorkBox('building')}
+          {WorkBox('lake')}
+          {WorkBox('sky')}
         </div>
       </section>
       <section className={styles.skills} id='skills'></section>

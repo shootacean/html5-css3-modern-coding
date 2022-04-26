@@ -36,6 +36,10 @@
 .buttonShowy {
   background-color: #f1b400;
 }
+.buttonGhost {
+  border: 1px solid #fff;
+  background-color: rba(255, 255, 255, 0.15);
+}
 
 
 /* ヘッダー */
@@ -100,13 +104,59 @@
   left: 0;
   width: 100%;
   height: 50%;
-  background: url('../public/images/tree.jpg');
+  background: no-repeat;
   background-size: 100% 100%;
   opacity: 0.2;
   transform: scaleY(-1);
 }
-.workImageWrapper, .workImage {
+.workBox.tree::after {
+  background-image: url('../public/images/tree.jpg');
+}
+.workBox.building::after {
+  background-image: url('../public/images/building.jpg');
+}
+.workBox.lake::after {
+  background-image: url('../public/images/lake.jpg');
+}
+.workBox.sky::after {
+  background-image: url('../public/images/sky.jpg');
+}
+.workImageWrapper {
   display: block;
   width: 100%;
   margin: 0 0 60%;
 }
+.workDescription {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  overflow-y: auto;
+}
+.workDescriptionInner {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.workText {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.workText .button {
+  width: 60%;
+  margin-top: 20px;
+  padding: 3px;
+}
+/* TODO 上下を入れ替える */
+/* .workBox:nth-child(odd) .workImageWrapper {
+  margin: 60% 0 0;
+}
+.workBox:nth-child(odd) .workDescription,
+.workBox:nth-child(odd)::after {
+  top: 0;
+} */
