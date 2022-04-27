@@ -100,7 +100,9 @@ const Home: NextPage = () => {
           <button type="submit">Send</button>
         </form>
       </section>
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        © Sample Site
+      </footer>
     </>
   )
 }
