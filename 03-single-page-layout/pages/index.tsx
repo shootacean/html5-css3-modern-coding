@@ -92,7 +92,14 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className={styles.contact} id='contact'></section>
+      <section className={styles.contact} id='contact'>
+        <h2 className={styles.heading}>Contact</h2>
+        <form action="post" className={styles.contactForm}>
+          <input type="text" name='name' placeholder='Name' />
+          <textarea name="message" placeholder='Message'></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
       <footer className={styles.footer}></footer>
     </>
   )
