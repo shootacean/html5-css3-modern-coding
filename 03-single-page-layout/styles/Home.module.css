@@ -163,7 +163,7 @@
 
 
 /* Skills */
-.skiils {
+.skills {
   padding: 80px 0;
   background-color: #fff;
   color: #333;
@@ -177,9 +177,7 @@
 .skillBox {
   display: table-cell;
 }
-/* TODO アイコンを中央配置する */
 .skillIcon {
-  position: relative;
   width: 150px;
   height: 150px;
   margin-bottom: 30px;
@@ -188,4 +186,9 @@
   color: #f1b400;
   font-size: 8rem;
   line-height: 142px;
+}
+.skillIcon::before {
+  display: block;
+  height: 100%;
+  margin-top: 30px;
 }
