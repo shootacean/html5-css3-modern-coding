@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Script from 'next/script'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
       <Head>
         <title>シングルページレイアウト</title>
       </Head>
+      <Script src="https://kit.fontawesome.com/5a42fdb372.js" crossOrigin='anonymous'/>
       <header className={styles.header}>
         <p className={styles.siteTitleSub}>Web designer's portfolio.</p>
         <h1 className={styles.siteTitle}>Hi, My Name Is ...</h1>
@@ -58,7 +60,38 @@ const Home: NextPage = () => {
           {WorkBox('sky')}
         </div>
       </section>
-      <section className={styles.skills} id='skills'></section>
+      <section className={styles.skills} id='skills'>
+        <h2 className={styles.heading}>My Skills</h2>
+        <div className={styles.skillsWrapper}>
+          <div className={styles.skillBox}>
+            <i className={`${styles.skillIcon} fa fa-lightbulb-o`}></i>
+            <div className={styles.skillTitle}>Idea</div>
+            <p className={styles.skillText}>
+              何かを考えることが好きです。<br />
+              新しいことを思いついては試しています。<br />
+              ディレクションの経験もあります。
+            </p>
+          </div>
+          <div className={styles.skillBox}>
+            <i className={`${styles.skillIcon} fa fa-paint-brush`}></i>
+            <div className={styles.skillTitle}>Design</div>
+            <p className={styles.skillText}>
+              見た目の綺麗さだけじゃなくて<br />
+              扱いやすさ、情報の伝わりやすさなど、<br />
+              その先のことまで考えることを意識しています。
+            </p>
+          </div>
+          <div className={styles.skillBox}>
+            <i className={`${styles.skillIcon} fa fa-code`}></i>
+            <div className={styles.skillTitle}>Coding</div>
+            <p className={styles.skillText}>
+              HTML/CSSコーディングも行います。<br />
+              正しく美しいマークアップと、<br />
+              今後の変更への強さを考慮しています。
+            </p>
+          </div>
+        </div>
+      </section>
       <section className={styles.contact} id='contact'></section>
       <footer className={styles.footer}></footer>
     </>
