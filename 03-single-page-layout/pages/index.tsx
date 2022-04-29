@@ -30,6 +30,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>シングルページレイアウト</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0" />
       </Head>
       <Script src="https://kit.fontawesome.com/5a42fdb372.js" crossOrigin='anonymous'/>
       <header className={styles.header}>
