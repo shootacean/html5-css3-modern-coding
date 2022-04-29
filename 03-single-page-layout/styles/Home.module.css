@@ -125,6 +125,13 @@
   display: block;
   width: 100%;
   margin: 0 0 60%;
+  overflow: hidden;
+}
+.workImage {
+  transition: 0.5s;
+}
+.workBox:hover .workImage {
+  transform: scale(1.2, 1.2);
 }
 .workDescription {
   position: absolute;
